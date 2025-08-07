@@ -13,16 +13,27 @@ class DelayEffect:
         self.sample_rate = sample_rate
 
     def process(self, audio: np.ndarray) -> np.ndarray:
+        """Apply the delay effect to an audio signal.
+
+        A circular buffer is used to feed back the delayed signal
+        according to the ``feedback`` and ``mix`` parameters.
+        The output length matches the input length.
+        """
+
         delay_samples = int(self.time / 1000.0 * self.sample_rate)
         if delay_samples <= 0:
             return audio
-        b = np.zeros(delay_samples + 1)
-        b[0] = 1.0
-        a = np.zeros(delay_samples + 1)
-        a[0] = 1.0
-        a[-1] = -self.feedback
-        delayed = signal.lfilter(b, a, audio)
-        return (1 - self.mix) * audio + self.mix * delayed
+
+        buffer = np.zeros(delay_samples)
+        output = np.zeros_like(audio)
+
+        for i, sample in enumerate(audio):
+            idx = i % delay_samples
+            delayed_sample = buffer[idx]
+            output[i] = (1 - self.mix) * sample + self.mix * delayed_sample
+            buffer[idx] = sample + delayed_sample * self.feedback
+
+        return output
 
 
 class ReverbEffect:

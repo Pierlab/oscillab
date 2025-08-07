@@ -140,9 +140,9 @@ Fichier JSON de configuration, exemple :
 
 ### 🧪 Tests
 
-- [ ] Test des oscillateurs avec signal unique
-- [ ] Vérification du rendu audio avec effet delay/reverb
-- [ ] Synchronisation entre UI et moteur audio
+- [x] Test des oscillateurs avec signal unique
+- [x] Vérification du rendu audio avec effet delay/reverb
+- [x] Synchronisation entre UI et moteur audio
 
 ---
 
