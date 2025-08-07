@@ -125,18 +125,18 @@ Fichier JSON de configuration, exemple :
 
 - [x] `oscillator.py` : Génération des formes d'onde
 - [x] `envelope.py` : Calcul de l’enveloppe ADSR
-- [ ] `filter.py` : Implémentation d’un filtre passe-bas
-- [ ] `effects.py` : Delay et Reverb
-- [ ] `mixer.py` : Chaînage du signal complet
+- [x] `filter.py` : Implémentation d’un filtre passe-bas
+- [x] `effects.py` : Delay et Reverb
+- [x] `mixer.py` : Chaînage du signal complet
 
 ### 🎹 Interface
 
-- [ ] `ui.py` : Interface utilisateur avec contrôle de tous les paramètres
-- [ ] `midi_input.py` : Support MIDI (optionnel)
+- [x] `ui.py` : Interface utilisateur avec contrôle de tous les paramètres
+- [x] `midi_input.py` : Support MIDI (optionnel)
 
 ### 💾 Sauvegarde/chargement
 
-- [ ] Lecture/écriture des presets depuis un fichier JSON
+- [x] Lecture/écriture des presets depuis un fichier JSON
 
 ### 🧪 Tests
 
