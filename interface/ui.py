@@ -43,19 +43,31 @@ class SynthUI(QtWidgets.QMainWindow):
         layout.addWidget(QtWidgets.QLabel("Oscillator 1 waveform"))
         layout.addWidget(self.combo1)
 
+        self.freq1 = QtWidgets.QDoubleSpinBox()
+        self.freq1.setRange(20.0, 2000.0)
+        self.freq1.setValue(440.0)
+        layout.addWidget(QtWidgets.QLabel("Oscillator 1 frequency"))
+        layout.addWidget(self.freq1)
+
         self.combo2 = QtWidgets.QComboBox()
         self.combo2.addItems(waveforms)
         self.combo2.currentTextChanged.connect(lambda w: setattr(self.osc2, "waveform", w))
         layout.addWidget(QtWidgets.QLabel("Oscillator 2 waveform"))
         layout.addWidget(self.combo2)
 
-        play_btn = QtWidgets.QPushButton("Play A4")
+        self.freq2 = QtWidgets.QDoubleSpinBox()
+        self.freq2.setRange(20.0, 2000.0)
+        self.freq2.setValue(440.0)
+        layout.addWidget(QtWidgets.QLabel("Oscillator 2 frequency"))
+        layout.addWidget(self.freq2)
+
+        play_btn = QtWidgets.QPushButton("Play note")
         play_btn.clicked.connect(self.play_note)
         layout.addWidget(play_btn)
 
     def play_note(self) -> None:
-        self.osc1.frequency = 440.0
-        self.osc2.frequency = 440.0
+        self.osc1.frequency = self.freq1.value()
+        self.osc2.frequency = self.freq2.value()
         self.mixer.play(1.0)
 
 
