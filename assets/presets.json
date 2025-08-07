@@ -1,0 +1,10 @@
+{
+  "osc1": {"waveform": "saw", "detune": 5, "volume": 0.8},
+  "osc2": {"waveform": "square", "detune": -5, "volume": 0.7},
+  "adsr": {"attack": 0.1, "decay": 0.3, "sustain": 0.7, "release": 0.4},
+  "filter": {"cutoff": 1200, "resonance": 0.8},
+  "effects": {
+    "delay": {"time": 250, "feedback": 0.4, "mix": 0.3},
+    "reverb": {"room_size": 0.5, "mix": 0.3}
+  }
+}

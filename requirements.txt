@@ -1,0 +1,7 @@
+numpy
+scipy
+sounddevice
+PyQt5
+audiolazy
+mido
+python-rtmidi

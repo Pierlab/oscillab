@@ -109,8 +109,8 @@ Fichier JSON de configuration, exemple :
 
 ### 🔧 Mise en place
 
-- [ ] Créer le projet avec l'arborescence décrite
-- [ ] Ajouter les dépendances dans `requirements.txt` :
+- [x] Créer le projet avec l'arborescence décrite
+- [x] Ajouter les dépendances dans `requirements.txt` :
   ```
   numpy
   scipy
@@ -123,7 +123,7 @@ Fichier JSON de configuration, exemple :
 
 ### 🔊 Implémentation audio
 
-- [ ] `oscillator.py` : Génération des formes d'onde
+- [x] `oscillator.py` : Génération des formes d'onde
 - [ ] `envelope.py` : Calcul de l’enveloppe ADSR
 - [ ] `filter.py` : Implémentation d’un filtre passe-bas
 - [ ] `effects.py` : Delay et Reverb
