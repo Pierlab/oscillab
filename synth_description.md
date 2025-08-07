@@ -124,7 +124,7 @@ Fichier JSON de configuration, exemple :
 ### 🔊 Implémentation audio
 
 - [x] `oscillator.py` : Génération des formes d'onde
-- [ ] `envelope.py` : Calcul de l’enveloppe ADSR
+- [x] `envelope.py` : Calcul de l’enveloppe ADSR
 - [ ] `filter.py` : Implémentation d’un filtre passe-bas
 - [ ] `effects.py` : Delay et Reverb
 - [ ] `mixer.py` : Chaînage du signal complet
